@@ -9,9 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let imageView: UIImageView = {
-        
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +17,3 @@ class ViewController: UIViewController {
 
 
 }
-
