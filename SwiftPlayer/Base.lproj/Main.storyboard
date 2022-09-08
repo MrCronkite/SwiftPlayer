@@ -47,10 +47,10 @@
                                 <color key="thumbTintColor" red="0.31079665280000002" green="0.2258482396" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yab-oh-rqJ">
-                                <rect key="frame" x="167" y="728.5" width="80" height="80"/>
+                                <rect key="frame" x="167" y="700.5" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.1641777194276148" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="Yul-9f-0I6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Yul-9f-0I6"/>
                                     <constraint firstAttribute="height" constant="80" id="ckl-JH-MI7"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -59,6 +59,41 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oN7-Jy-equ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7S-KL-Tvd">
+                                <rect key="frame" x="279" y="710.5" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ky9-Qw-HId"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="c2K-js-dQE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.right" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdn-pN-IdF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-hi-pTU">
+                                <rect key="frame" x="75" y="710.5" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Dh-rN-NpE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="zAn-Y8-EFD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="prevSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jP5-Lf-Qlh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,16 +104,31 @@
                             <constraint firstItem="oda-dV-Ppj" firstAttribute="top" secondItem="MKl-3B-onT" secondAttribute="bottom" constant="70" id="6WX-aw-k56"/>
                             <constraint firstItem="pwC-s6-3eA" firstAttribute="top" secondItem="423-tt-Ueb" secondAttribute="bottom" constant="40" id="8mq-dh-Ivv"/>
                             <constraint firstItem="oda-dV-Ppj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C2s-c8-cqH"/>
-                            <constraint firstItem="yab-oh-rqJ" firstAttribute="top" secondItem="pwC-s6-3eA" secondAttribute="bottom" constant="78" id="IFF-Rv-iCM"/>
+                            <constraint firstItem="yab-oh-rqJ" firstAttribute="top" secondItem="pwC-s6-3eA" secondAttribute="bottom" constant="50" id="IFF-Rv-iCM"/>
                             <constraint firstItem="MKl-3B-onT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K7a-zo-NOa"/>
+                            <constraint firstItem="yab-oh-rqJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YeI-hi-pTU" secondAttribute="trailing" constant="8" symbolic="YES" id="S5X-qd-piV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c7S-KL-Tvd" secondAttribute="trailing" constant="75" id="Vdz-Mx-As7"/>
+                            <constraint firstItem="c7S-KL-Tvd" firstAttribute="centerY" secondItem="yab-oh-rqJ" secondAttribute="centerY" id="W16-Ri-skC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oda-dV-Ppj" secondAttribute="trailing" constant="22" id="XeO-Mw-Igg"/>
                             <constraint firstItem="pwC-s6-3eA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dFp-k4-Cf7"/>
                             <constraint firstItem="MKl-3B-onT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="i8u-1w-hBb"/>
                             <constraint firstItem="423-tt-Ueb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lWm-x3-4I8"/>
                             <constraint firstItem="423-tt-Ueb" firstAttribute="top" secondItem="oda-dV-Ppj" secondAttribute="bottom" constant="7" id="qdH-ts-GaB"/>
+                            <constraint firstItem="c7S-KL-Tvd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yab-oh-rqJ" secondAttribute="trailing" constant="8" symbolic="YES" id="sI2-vm-Usf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="423-tt-Ueb" secondAttribute="trailing" constant="158" id="wCw-Ak-Gdh"/>
+                            <constraint firstItem="YeI-hi-pTU" firstAttribute="centerY" secondItem="yab-oh-rqJ" secondAttribute="centerY" id="yAg-aK-eIk"/>
+                            <constraint firstItem="YeI-hi-pTU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="yvo-1B-nSb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistName" destination="423-tt-Ueb" id="eKj-Ok-KeP"/>
+                        <outlet property="imgView" destination="MKl-3B-onT" id="e8R-fX-J8H"/>
+                        <outlet property="leftButton" destination="YeI-hi-pTU" id="uug-Tt-d8f"/>
+                        <outlet property="nameSong" destination="oda-dV-Ppj" id="UsK-ZU-qag"/>
+                        <outlet property="playButton" destination="yab-oh-rqJ" id="2HQ-ee-9Qc"/>
+                        <outlet property="progressBar" destination="pwC-s6-3eA" id="fKK-bc-1vF"/>
+                        <outlet property="rightButton" destination="c7S-KL-Tvd" id="X8l-eb-sWM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,6 +136,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.left" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
     </resources>
 </document>
