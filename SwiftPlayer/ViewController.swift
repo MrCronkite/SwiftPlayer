@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
     
+    var albom = SongList.contentSong()
+    
     
     @IBOutlet weak var imgView: UIImageView!
     
@@ -26,25 +28,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imgView.image = UIImage.init(named: "img3")
-        nameSong.text = "Never Gonna Give You Up"
-        artistName.text = "Rick Astley"
-       // playButton.setImage( .init(systemName: "pause.fill"), for: .normal)
-        //playButton.backgroundColor =
-        
-        
-    }
-
     
-    @IBAction func playSong(_ sender: UIButton) {
+        imgView.image = albom[1]?.nameImage
+        nameSong.text = albom[1]?.nameSong
+        artistName.text = albom[1]?.artistName
+        
         do {
-            if let audioPath = Bundle.main.path(forResource: "never", ofType: "mp3"){
+            if let audioPath = Bundle.main.path(forResource: albom[1]?.artistName, ofType: "mp3"){
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
             }
         } catch {
             print("error")
         }
+    }
+
+    
+    @IBAction func playSong(_ sender: UIButton) {
         
         if player.isPlaying {
             self.player.pause()
@@ -53,18 +52,11 @@ class ViewController: UIViewController {
             self.player.play()
             playButton.setImage(.init(systemName: "pause.fill"), for: .normal)
         }
+        
     }
     
     @IBAction func nextSong(_ sender: Any) {
-        imgView.image = .init(named: "img1")
-        do {
-            if let audioPath = Bundle.main.path(forResource: "tatu", ofType: "mp3"){
-                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-            }
-        } catch {
-            print("error")
-        }
-        player.play()
+       
     }
     
     @IBAction func prevSong(_ sender: Any) {
