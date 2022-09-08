@@ -31,10 +31,19 @@ class ViewController: UIViewController {
         nameSong.text = "Never Gonna Give You Up"
         artistName.text = "Rick Astley"
         
+        
     }
 
     
     @IBAction func playSong(_ sender: Any) {
+        do {
+            if let audioPath = Bundle.main.path(forResource: "never", ofType: "mp3"){
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            }
+        } catch {
+            print("error")
+        }
+        player.play()
     }
     
     @IBAction func nextSong(_ sender: Any) {

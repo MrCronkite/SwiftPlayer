@@ -13,9 +13,9 @@
 		B2060B4828C2536E00F9022D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2060B4628C2536E00F9022D /* Main.storyboard */; };
 		B2060B4A28C2537100F9022D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2060B4928C2537100F9022D /* Assets.xcassets */; };
 		B2060B4D28C2537100F9022D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2060B4B28C2537100F9022D /* LaunchScreen.storyboard */; };
-		B2060B5828C2577800F9022D /* Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5528C2577800F9022D /* Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3 */; };
-		B2060B5928C2577800F9022D /* Тату - Нас Не Догонят.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5628C2577800F9022D /* Тату - Нас Не Догонят.mp3 */; };
-		B2060B5A28C2577800F9022D /* Three Days Grace - Souvenirs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5728C2577800F9022D /* Three Days Grace - Souvenirs.mp3 */; };
+		B2060B5828C2577800F9022D /* never.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5528C2577800F9022D /* never.mp3 */; };
+		B2060B5928C2577800F9022D /* tatu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5628C2577800F9022D /* tatu.mp3 */; };
+		B2060B5A28C2577800F9022D /* tdg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2060B5728C2577800F9022D /* tdg.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		B2060B4928C2537100F9022D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2060B4C28C2537100F9022D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2060B4E28C2537100F9022D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2060B5528C2577800F9022D /* Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3"; path = "../../../../../Downloads/Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3"; sourceTree = "<group>"; };
-		B2060B5628C2577800F9022D /* Тату - Нас Не Догонят.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Тату - Нас Не Догонят.mp3"; path = "../../../../../Downloads/Тату - Нас Не Догонят.mp3"; sourceTree = "<group>"; };
-		B2060B5728C2577800F9022D /* Three Days Grace - Souvenirs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Three Days Grace - Souvenirs.mp3"; path = "../../../../../Downloads/Three Days Grace - Souvenirs.mp3"; sourceTree = "<group>"; };
+		B2060B5528C2577800F9022D /* never.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = never.mp3; path = ../../../../../Downloads/never.mp3; sourceTree = "<group>"; };
+		B2060B5628C2577800F9022D /* tatu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tatu.mp3; path = ../../../../../Downloads/tatu.mp3; sourceTree = "<group>"; };
+		B2060B5728C2577800F9022D /* tdg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tdg.mp3; path = ../../../../../Downloads/tdg.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,9 @@
 		B2060B5428C2575600F9022D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				B2060B5628C2577800F9022D /* Тату - Нас Не Догонят.mp3 */,
-				B2060B5528C2577800F9022D /* Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3 */,
-				B2060B5728C2577800F9022D /* Three Days Grace - Souvenirs.mp3 */,
+				B2060B5628C2577800F9022D /* tatu.mp3 */,
+				B2060B5528C2577800F9022D /* never.mp3 */,
+				B2060B5728C2577800F9022D /* tdg.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -142,12 +142,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2060B5828C2577800F9022D /* Rick_Astley_-_Never_Gonna_Give_You_Up_legitmuzic.com.mp3 in Resources */,
+				B2060B5828C2577800F9022D /* never.mp3 in Resources */,
 				B2060B4D28C2537100F9022D /* LaunchScreen.storyboard in Resources */,
-				B2060B5A28C2577800F9022D /* Three Days Grace - Souvenirs.mp3 in Resources */,
+				B2060B5A28C2577800F9022D /* tdg.mp3 in Resources */,
 				B2060B4A28C2537100F9022D /* Assets.xcassets in Resources */,
 				B2060B4828C2536E00F9022D /* Main.storyboard in Resources */,
-				B2060B5928C2577800F9022D /* Тату - Нас Не Догонят.mp3 in Resources */,
+				B2060B5928C2577800F9022D /* tatu.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
