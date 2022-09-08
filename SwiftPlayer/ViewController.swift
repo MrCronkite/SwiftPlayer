@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player = AVAudioPlayer()
     
     
     @IBOutlet weak var imgView: UIImageView!
@@ -23,7 +26,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        imgView.image = UIImage.init(named: "img3")
+        nameSong.text = "Never Gonna Give You Up"
+        artistName.text = "Rick Astley"
+        
     }
 
     
