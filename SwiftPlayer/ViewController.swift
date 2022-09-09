@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         imgView.image = albom[1]?.nameImage
         nameSong.text = albom[1]?.nameSong
         artistName.text = albom[1]?.artistName
+        playButton.layer.cornerRadius = 10
+        rightButton.layer.cornerRadius = 10
+        leftButton.layer.cornerRadius = 10
         
         do {
             if let audioPath = Bundle.main.path(forResource: albom[1]?.artistName, ofType: "mp3"){
@@ -92,5 +95,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func prevSong(_ sender: Any) {
+        if key == 1 {
+            changeSong(index: 3)
+        } else if key == 2 {
+            changeSong(index: 1)
+        } else if key == 3 {
+            changeSong(index: 2)
+        }
     }
 }
