@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             if let audioPath = Bundle.main.path(forResource: albom[1]?.artistName, ofType: "mp3"){
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
                 progressBar.maximumValue = Float(player.duration)
-                progressBar.
             }
         } catch {
             print("error")
@@ -47,8 +46,23 @@ class ViewController: UIViewController {
         progressBar.addTarget(self, action: #selector(change), for: .valueChanged)
     }
     
+    private func changeSong(index: Int){
+        self.key = index
+        imgView.image = albom[index]?.nameImage
+        nameSong.text = albom[index]?.nameSong
+        artistName.text = albom[index]?.artistName
+        playButton.setImage(.init(systemName: "play.fill"), for: .normal)
+        
+        do {
+            if let audioPath = Bundle.main.path(forResource: albom[index]?.artistName, ofType: "mp3"){
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            }
+        } catch {
+            print("error")
+        }
+        
+    }
     
-
     
     @IBAction func playSong(_ sender: UIButton) {
         
@@ -69,45 +83,11 @@ class ViewController: UIViewController {
     
     @IBAction func nextSong(_ sender: Any) {
         if key == 1 {
-            self.key = 2
-            imgView.image = albom[1]?.nameImage
-            nameSong.text = albom[1]?.nameSong
-            artistName.text = albom[1]?.artistName
-            
-            do {
-                if let audioPath = Bundle.main.path(forResource: albom[1]?.artistName, ofType: "mp3"){
-                    try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-                }
-            } catch {
-                print("error")
-            }
-            
+            changeSong(index: 2)
         } else if key == 2 {
-            self.key = 3
-            imgView.image = albom[2]?.nameImage
-            nameSong.text = albom[2]?.nameSong
-            artistName.text = albom[2]?.artistName
-            
-            do {
-                if let audioPath = Bundle.main.path(forResource: albom[2]?.artistName, ofType: "mp3"){
-                    try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-                }
-            } catch {
-                print("error")
-            }
+            changeSong(index: 3)
         } else if key == 3 {
-            self.key = 1
-            imgView.image = albom[3]?.nameImage
-            nameSong.text = albom[3]?.nameSong
-            artistName.text = albom[3]?.artistName
-            
-            do {
-                if let audioPath = Bundle.main.path(forResource: albom[3]?.artistName, ofType: "mp3"){
-                    try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-                }
-            } catch {
-                print("error")
-            }
+            changeSong(index: 1)
         }
     }
     
